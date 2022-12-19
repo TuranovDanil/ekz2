@@ -1,0 +1,13 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<h1>главная</h1>
+{% for item in rec %}
+    {{ item.name }}
+    {{ item.desc }}
+    {% if item.photo %}
+    <img src="{{ item.photo.url }}" alt="фото">
+    {% endif %}
+{% endfor %}
+{% endblock %}

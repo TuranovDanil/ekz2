@@ -1,0 +1,11 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<h1>Добавление товара</h1>
+<form method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+           {% bootstrap_form form layout='horizontal' %}
+           {% buttons submit='Создать' %} {% endbuttons %}
+</form>
+{% endblock %}
